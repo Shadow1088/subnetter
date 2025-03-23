@@ -10,4 +10,4 @@ You only need Python v. >2.0. No other installation is required as only `math` l
 
 ## Example
 
-![example](https://github.com/Shadow1088/subnetter/img/image.png)
+![example](https://github.com/Shadow1088/subnetter/blob/main/img/image.png)
