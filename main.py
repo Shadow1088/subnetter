@@ -1,5 +1,4 @@
 import math
-from typing_extensions import NewType
 
 amount = int(input("\nEnter the amount of subnets you would like to be created: "))
 iprange = int(input("\nShould all subnets have the same range for hosts? If so, type the number of max hosts, else write 0: "))
