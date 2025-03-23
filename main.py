@@ -16,14 +16,13 @@ if iprange:
 
 else:
     for i in range(amount):
-        n = 2**math.ceil(math.log2(int(input(f"\nEnter the range for the {i}. subnet: "))+2))
+        n = 2**math.ceil(math.log2(int(input(f"\nEnter the range for the {i+1}. subnet: "))+2))
         totalhosts = totalhosts+n
         ranges.append(n)
         masks.append(int(32-math.log2(n)))
-print(ranges)
-print(masks)
 
-network = input("what private network IP class to use? (A=over a milion IPs; B=up to a milion; C=under 65k)\n")
+
+network = input("\nWhat private network IP class to use? (A=over a milion IPs; B=up to a milion; C=under 65k)\n")
 
 if (totalhosts<65536) and (network=="C"):
     network="192.168.0.0"
@@ -35,7 +34,7 @@ elif network in "ABC":
     network="10.0.0.0"
 else:
     print("Something went wrong, maybe invalid input?")
-print(f"Picked network: {network}")
+print(f"Selected network: {network}")
 
 sep = network.split(".")
 binarysep = bin(int(sep[0])).zfill(10) + bin(int(sep[1])).zfill(10) + bin(int(sep[2])).zfill(10) + bin(int(sep[3])).zfill(10)
